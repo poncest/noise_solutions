@@ -1,0 +1,473 @@
+/* ============================================================
+   Noise Solution Impact Dashboard — Custom Styles
+   Brand: #01070A black / #BEFF00 acid green / #8755FF violet
+   Font:  Barlow (Google Fonts proxy for Roc Grotesk)
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800&display=swap');
+
+/* ── CSS custom properties (tokens) ──────────────────────── */
+:root {
+  --ns-black:       #01070A;
+  --ns-green:       #BEFF00;
+  --ns-violet:      #8755FF;
+  --ns-white:       #FFFFFF;
+  --ns-surface:     #0D1117;
+  --ns-surface-2:   #161B22;
+  --ns-muted:       #8B949E;
+  --ns-border:      #21262D;
+  --ns-cyan:        #00C8FF;
+  --ns-red:         #FF4D4D;
+
+  --font-main:      'Barlow', sans-serif;
+  --radius:         6px;
+  --radius-lg:      12px;
+}
+
+/* ── Reset / base ─────────────────────────────────────────── */
+body,
+.pusher,
+.ui.segment,
+.ui.tab.segment {
+  background-color: var(--ns-black) !important;
+  color:            var(--ns-white) !important;
+  font-family:      var(--font-main) !important;
+}
+
+/* ── Header ───────────────────────────────────────────────── */
+.ns-header {
+  background:   var(--ns-surface);
+  border-bottom: 1px solid var(--ns-border);
+  padding:      1.2em 2em;
+  margin-bottom: 0;
+}
+
+.ns-header-inner {
+  display:         flex;
+  align-items:     center;
+  justify-content: space-between;
+  max-width:       1400px;
+  margin:          0 auto;
+}
+
+.ns-logo-text {
+  font-size:   1.6em;
+  font-weight: 800;
+  color:       var(--ns-white);
+  letter-spacing: 0.12em;
+}
+
+.ns-logo-accent {
+  font-size:   1.6em;
+  font-weight: 800;
+  color:       var(--ns-green);
+  letter-spacing: 0.12em;
+  margin-left: 0.4em;
+}
+
+.ns-header-subtitle {
+  color:       var(--ns-muted);
+  font-size:   0.85em;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+}
+
+/* ── Tab navigation ───────────────────────────────────────── */
+.ns-tab-menu {
+  background:    var(--ns-surface) !important;
+  border-bottom: 2px solid var(--ns-border) !important;
+  padding:       0 2em !important;
+  margin:        0 !important;
+}
+
+.ns-tab-menu .item {
+  color:       var(--ns-muted) !important;
+  font-weight: 600 !important;
+  font-family: var(--font-main) !important;
+  letter-spacing: 0.04em;
+  padding:     1em 1.4em !important;
+  border-bottom: 2px solid transparent !important;
+  margin-bottom: -2px !important;
+  transition:  all 0.2s ease;
+}
+
+.ns-tab-menu .item:hover {
+  color:        var(--ns-white) !important;
+  border-bottom-color: var(--ns-border) !important;
+  background:   transparent !important;
+}
+
+.ns-tab-menu .active.item {
+  color:        var(--ns-green) !important;
+  border-bottom: 2px solid var(--ns-green) !important;
+  background:   transparent !important;
+}
+
+/* ── Tab content area ─────────────────────────────────────── */
+.ns-tab-content {
+  background: var(--ns-black) !important;
+  border:     none !important;
+  padding:    2em !important;
+  box-shadow: none !important;
+}
+
+/* ── Section headers ──────────────────────────────────────── */
+.ns-section-header {
+  margin-bottom: 1.8em;
+}
+
+.ns-section-title {
+  font-size:   1.8em;
+  font-weight: 800;
+  color:       var(--ns-white);
+  margin:      0 0 0.3em 0;
+  line-height: 1.2;
+}
+
+.ns-section-sub {
+  color:     var(--ns-muted);
+  font-size: 0.95em;
+  margin:    0;
+}
+
+/* ── KPI cards ────────────────────────────────────────────── */
+.ns-kpi-grid {
+  margin-bottom: 2em !important;
+}
+
+.ns-kpi-card {
+  background:    var(--ns-surface);
+  border:        1px solid var(--ns-border);
+  border-radius: var(--radius-lg);
+  padding:       2em 1.5em;
+  text-align:    center;
+  min-height:    160px;
+  display:       flex;
+  flex-direction: column;
+  justify-content: center;
+  transition:    border-color 0.2s ease;
+}
+
+.ns-kpi-card:hover {
+  border-color: var(--ns-green);
+}
+
+.ns-kpi-value {
+  font-size:   3em;
+  font-weight: 800;
+  line-height: 1;
+  margin-bottom: 0.2em;
+}
+
+.ns-kpi-label {
+  font-size:   1em;
+  font-weight: 600;
+  color:       var(--ns-white);
+  margin-bottom: 0.3em;
+  letter-spacing: 0.04em;
+}
+
+.ns-kpi-sublabel {
+  font-size: 0.82em;
+  color:     #A8B3BC;
+}
+
+/* ── Takeaway text ────────────────────────────────────────── */
+.ns-takeaway {
+  margin-bottom: 2em;
+}
+
+.ns-takeaway-p {
+  font-size:   1.05em;
+  font-weight: 500;
+  color:       var(--ns-muted);
+  border-left: 3px solid var(--ns-green);
+  padding-left: 1em;
+  margin:      0;
+  line-height: 1.6;
+}
+
+/* ── Hero quote ───────────────────────────────────────────── */
+.ns-hero-quote {
+  margin-top: 3em;
+}
+
+.ns-quote-block {
+  background:    var(--ns-surface);
+  border:        1px solid var(--ns-border);
+  border-radius: var(--radius-lg);
+  padding:       2.5em 3em;
+  position:      relative;
+  max-width:     800px;
+  margin:        0 auto;
+}
+
+.ns-quote-mark {
+  font-size:  5em;
+  color:      var(--ns-green);
+  line-height: 0.6;
+  font-weight: 800;
+  margin-bottom: 0.3em;
+  display:    block;
+}
+
+.ns-quote-text {
+  font-size:   1.3em;
+  font-weight: 500;
+  font-style:  italic;
+  color:       var(--ns-white);
+  line-height: 1.6;
+  margin:      0 0 1em 0;
+}
+
+.ns-quote-attr {
+  color:     var(--ns-muted);
+  font-size: 0.85em;
+}
+
+/* ── Insight box ──────────────────────────────────────────── */
+.ns-insight-box {
+  background:    var(--ns-surface);
+  border:        1px solid var(--ns-border);
+  border-left:   3px solid var(--ns-violet);
+  border-radius: var(--radius);
+  padding:       1em 1.4em;
+  margin:        1.5em 0;
+}
+
+.ns-insight-inner {
+  font-size:   0.95em;
+  color:       var(--ns-muted);
+  line-height: 1.6;
+}
+
+.ns-insight-label {
+  color:       var(--ns-violet);
+  font-weight: 700;
+}
+
+/* ── Charts ───────────────────────────────────────────────── */
+.ns-chart-container {
+  background:    var(--ns-surface);
+  border:        1px solid var(--ns-border);
+  border-radius: var(--radius-lg);
+  padding:       1.5em;
+  margin-bottom: 1.5em;
+}
+
+/* ── Tables ───────────────────────────────────────────────── */
+.ns-table-container {
+  margin-top: 1.5em;
+}
+
+/* ── Filter row ───────────────────────────────────────────── */
+.ns-filter-row {
+  margin-bottom: 1.5em !important;
+}
+
+.ns-filter-row .ui.dropdown,
+.ns-filter-row select {
+  background:    var(--ns-surface) !important;
+  color:         var(--ns-white) !important;
+  border:        1px solid var(--ns-border) !important;
+  border-radius: var(--radius) !important;
+}
+
+/* ── Voices tab ───────────────────────────────────────────── */
+.ns-toggle-row {
+  margin-bottom: 2em;
+}
+
+.ns-toggle-btn {
+  background:    var(--ns-surface) !important;
+  color:         var(--ns-muted) !important;
+  border:        1px solid var(--ns-border) !important;
+  font-family:   var(--font-main) !important;
+  font-weight:   600 !important;
+  transition:    all 0.2s ease;
+}
+
+.ns-toggle-btn.active {
+  background: var(--ns-green) !important;
+  color:      var(--ns-black) !important;
+  border-color: var(--ns-green) !important;
+}
+
+.ns-voices-grid {
+  margin-bottom: 1.5em !important;
+}
+
+.ns-quote-card {
+  background:    var(--ns-surface);
+  border:        1px solid var(--ns-border);
+  border-radius: var(--radius-lg);
+  padding:       1.8em;
+  height:        100%;
+  min-height:    220px;
+  display:       flex;
+  flex-direction: column;
+}
+
+.ns-quote-card:hover {
+  border-color: rgba(190, 255, 0, 0.3);
+}
+
+.ns-quote-empty {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.ns-quote-domain {
+  font-size:   0.75em;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 0.8em;
+}
+
+.ns-quote-mark-sm {
+  font-size:   2.5em;
+  line-height: 0.7;
+  font-weight: 800;
+  color:       var(--ns-muted);
+  margin-bottom: 0.4em;
+}
+
+.ns-quote-card-text {
+  font-size:   1em;
+  font-style:  italic;
+  color:       var(--ns-white);
+  line-height: 1.6;
+  flex:        1;
+  margin:      0 0 1em 0;
+}
+
+.ns-quote-empty-text {
+  color:     var(--ns-muted);
+  font-size: 0.9em;
+}
+
+.ns-quote-sentiment-tag {
+  font-size:   0.72em;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color:       var(--ns-muted);
+  margin-top:  auto;
+}
+
+.ns-refresh-row {
+  text-align:    center;
+  margin-bottom: 1.5em;
+}
+
+.ns-refresh-btn {
+  color:        var(--ns-muted) !important;
+  border-color: var(--ns-border) !important;
+  font-family:  var(--font-main) !important;
+}
+
+.ns-refresh-btn:hover {
+  color:        var(--ns-white) !important;
+  border-color: var(--ns-green) !important;
+}
+
+/* ── Context notes ────────────────────────────────────────── */
+.ns-context-note {
+  font-size: 0.82em;
+  color:     var(--ns-muted);
+  padding:   0.8em 0;
+  border-top: 1px solid var(--ns-border);
+  margin-top: 1em;
+}
+
+/* ── About button ─────────────────────────────────────────── */
+.ns-about-btn {
+  background:    transparent;
+  border:        1px solid var(--ns-border);
+  color:         var(--ns-muted);
+  font-family:   var(--font-main);
+  font-size:     0.82em;
+  font-weight:   600;
+  padding:       0.4em 0.9em;
+  border-radius: var(--radius);
+  cursor:        pointer;
+  transition:    all 0.2s ease;
+  white-space:   nowrap;
+}
+
+.ns-about-btn:hover {
+  border-color: var(--ns-green);
+  color:        var(--ns-white);
+}
+
+/* ── About modal header ───────────────────────────────────── */
+.ns-modal-header {
+  background:    var(--ns-surface);
+  color:         var(--ns-white);
+  font-family:   var(--font-main);
+  font-size:     1.2em;
+  font-weight:   700;
+  padding:       1.2em 1.5em;
+  border-bottom: 1px solid var(--ns-border);
+}
+
+/* ── Modal override ───────────────────────────────────────── */
+.ui.modal.about-modal {
+  background: var(--ns-surface) !important;
+  border:     1px solid var(--ns-border) !important;
+}
+
+
+.ns-footer {
+  background:   var(--ns-surface);
+  border-top:   1px solid var(--ns-border);
+  padding:      1.5em 2em;
+  margin-top:   3em;
+}
+
+.ns-footer-text {
+  color:     var(--ns-muted);
+  font-size: 0.78em;
+  max-width: 900px;
+  margin:    0 auto;
+  text-align: center;
+  line-height: 1.6;
+}
+
+/* ── Selectize / dropdown overrides ──────────────────────── */
+.selectize-control .selectize-input {
+  background:    var(--ns-surface) !important;
+  border:        1px solid var(--ns-border) !important;
+  color:         var(--ns-white) !important;
+  border-radius: var(--radius) !important;
+}
+
+.selectize-dropdown {
+  background:    var(--ns-surface-2) !important;
+  border:        1px solid var(--ns-border) !important;
+  color:         var(--ns-white) !important;
+}
+
+.selectize-dropdown .option:hover,
+.selectize-dropdown .option.active {
+  background: var(--ns-border) !important;
+  color:      var(--ns-green) !important;
+}
+
+/* ── Slider overrides ─────────────────────────────────────── */
+.irs--shiny .irs-bar,
+.irs--shiny .irs-handle {
+  background: var(--ns-green) !important;
+  border-color: var(--ns-green) !important;
+}
+
+.irs--shiny .irs-from,
+.irs--shiny .irs-to,
+.irs--shiny .irs-single {
+  background:    var(--ns-green) !important;
+  color:         var(--ns-black) !important;
+  font-weight:   700;
+  border-radius: var(--radius);
+}

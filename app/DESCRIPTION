@@ -1,0 +1,4 @@
+Type: shiny
+Title: Noise Solution Impact Dashboard
+Description: Digital music mentoring impact analysis using Self-Determination Theory.
+Imports: shiny, shiny.semantic, dplyr, tidyr, ggplot2, scales, ggiraph, reactable, stringr, glue

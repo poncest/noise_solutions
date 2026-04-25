@@ -1,0 +1,31 @@
+# .rscignore
+# Controls what shinyapps.io excludes from the deployment bundle
+# NOT the same as .gitignore
+
+# Development artifacts
+.Rprofile
+.Rhistory
+*.Rproj
+
+# renv (not used, but exclude if accidentally created)
+renv/
+renv.lock
+
+# Raw data (processed .rds files are deployed, not raw Excel)
+data/raw/
+
+# Local deployment metadata
+rsconnect/
+
+# Screenshots and docs
+screenshots/
+
+# Temporary files
+*.tmp
+*.log
+
+# Development scripts
+data_preparation.R
+install_packages.R
+dev/
+docs/
